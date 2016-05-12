@@ -14,7 +14,6 @@ var ErrorModal = React.createClass({
   },
   componentDidMount: function () {
     var {title, message} = this.props;
-
     var modalMarkup = (
       <div id="error-modal" className="reveal tiny text-center" data-reveal="">
         <h4>{title}</h4>
@@ -36,7 +35,6 @@ var ErrorModal = React.createClass({
   render: function () {
     return (
       <div>
-
       </div>
     );
   }
