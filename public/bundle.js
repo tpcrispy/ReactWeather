@@ -24976,7 +24976,7 @@
 	      if (isLoading) {
 	        return React.createElement(
 	          'h3',
-	          null,
+	          { className: 'text-center' },
 	          'Fetching Weather..'
 	        );
 	      } else if (temp && location) {
@@ -24989,8 +24989,8 @@
 	      null,
 	      React.createElement(
 	        'h2',
-	        null,
-	        'Weather component'
+	        { className: 'text-center' },
+	        'Get Weather!'
 	      ),
 	      React.createElement(WeatherForm, { onSearch: this.handleSearch }),
 	      renderMessage()
@@ -25031,7 +25031,7 @@
 	        React.createElement('input', { type: 'text', ref: 'location' }),
 	        React.createElement(
 	          'button',
-	          null,
+	          { className: 'button expanded' },
 	          'Get Weather'
 	        )
 	      )
@@ -25045,7 +25045,7 @@
 /* 227 */
 /***/ function(module, exports, __webpack_require__) {
 
-	'use strict';
+	"use strict";
 
 	var React = __webpack_require__(8);
 
@@ -25054,11 +25054,11 @@
 	  var location = _ref.location;
 
 	  return React.createElement(
-	    'h2',
-	    null,
-	    'Its ',
+	    "h2",
+	    { className: "text-center" },
+	    "Its ",
 	    temp,
-	    ' degrees in ',
+	    " degrees in ",
 	    location
 	  );
 	};
@@ -26304,7 +26304,7 @@
 	          { href: "http://facebook.github.io/react" },
 	          "React:"
 	        ),
-	        " - This was the JavaScript farmwork used"
+	        " - This was the JavaScript farmwork used."
 	      ),
 	      React.createElement("br", null),
 	      React.createElement(
@@ -26337,7 +26337,7 @@
 	          { href: "https://github.com/mzabriskie/axios" },
 	          "Axios:"
 	        ),
-	        " - Promise based HTTP client for the browser and node.js "
+	        " - Promise based HTTP client for the browser and node.js. "
 	      ),
 	      React.createElement("br", null),
 	      React.createElement(
@@ -26348,7 +26348,7 @@
 	          { href: "http://foundation.zurb.com/" },
 	          "Foundation:"
 	        ),
-	        " - For simple HTML/CSS display of application "
+	        " - For simple HTML/CSS display of application. "
 	      ),
 	      React.createElement("br", null)
 	    )
