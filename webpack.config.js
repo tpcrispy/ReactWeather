@@ -6,10 +6,10 @@ module.exports = {
     'script!foundation-sites/dist/foundation.min.js',
     './app/app.jsx'
   ],
-  externals:{
+  externals: {
     jquery: 'jQuery'
   },
-  plugins:[
+  plugins: [
     new webpack.ProvidePlugin({
       '$': 'jquery',
       'jQuery': 'jquery'
@@ -21,16 +21,17 @@ module.exports = {
   },
   resolve: {
     root: __dirname,
-    alias:{
+    alias: {
       Main: 'app/components/Main.jsx',
       Nav: 'app/components/Nav.jsx',
       Weather: 'app/components/Weather.jsx',
-      About: 'app/components/About.jsx',
-      Examples: 'app/components/Examples.jsx',
       WeatherForm: 'app/components/WeatherForm.jsx',
       WeatherMessage: 'app/components/WeatherMessage.jsx',
+      About: 'app/components/About.jsx',
+      Examples: 'app/components/Examples.jsx',
       openWeatherMap: 'app/api/openWeatherMap.jsx',
-      ErrorModal: 'app/components/ErrorModal.jsx'
+      ErrorModal: 'app/components/ErrorModal.jsx',
+      applicationStyles: 'app/styles/app.scss'
     },
     extensions: ['', '.js', '.jsx']
   },
@@ -39,11 +40,12 @@ module.exports = {
       {
         loader: 'babel-loader',
         query: {
-          presets: ['react', 'es2015']
+          presets: ['react', 'es2015', 'stage-0']
         },
         test: /\.jsx?$/,
         exclude: /(node_modules|bower_components)/
       }
     ]
-  }
+  },
+  devtool: 'cheap-module-eval-source-map'
 };
