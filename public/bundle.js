@@ -24823,11 +24823,14 @@
 	    null,
 	    React.createElement(Nav, null),
 	    React.createElement(
-	      'h2',
-	      null,
-	      'Main component'
-	    ),
-	    props.children
+	      'div',
+	      { className: 'row' },
+	      React.createElement(
+	        'div',
+	        { className: 'columns medium-6 large-4 small-centered' },
+	        props.children
+	      )
+	    )
 	  );
 	};
 
@@ -26267,15 +26270,88 @@
 /* 247 */
 /***/ function(module, exports, __webpack_require__) {
 
-	'use strict';
+	"use strict";
 
 	var React = __webpack_require__(8);
 
 	var About = function About(props) {
 	  return React.createElement(
-	    'h2',
+	    "div",
 	    null,
-	    'About component'
+	    React.createElement(
+	      "h1",
+	      { className: "text-center" },
+	      "About this App:"
+	    ),
+	    React.createElement(
+	      "p",
+	      null,
+	      "This is a simple Weather application built on React."
+	    ),
+	    React.createElement(
+	      "p",
+	      { className: "text-center" },
+	      "Here are some of the tools I've used:"
+	    ),
+	    React.createElement(
+	      "ul",
+	      null,
+	      React.createElement(
+	        "li",
+	        null,
+	        React.createElement(
+	          "a",
+	          { href: "http://facebook.github.io/react" },
+	          "React:"
+	        ),
+	        " - This was the JavaScript farmwork used"
+	      ),
+	      React.createElement("br", null),
+	      React.createElement(
+	        "li",
+	        null,
+	        React.createElement(
+	          "a",
+	          { href: "http://openweathermap.com" },
+	          "Open Weather Map:"
+	        ),
+	        " - I used Open Weather Map API to search for data via city name."
+	      ),
+	      React.createElement("br", null),
+	      React.createElement(
+	        "li",
+	        null,
+	        React.createElement(
+	          "a",
+	          { href: "https://webpack.github.io/docs/" },
+	          "Webpack:"
+	        ),
+	        " - I used Webpack to bundle my modules. "
+	      ),
+	      React.createElement("br", null),
+	      React.createElement(
+	        "li",
+	        null,
+	        React.createElement(
+	          "a",
+	          { href: "https://github.com/mzabriskie/axios" },
+	          "Axios:"
+	        ),
+	        " - Promise based HTTP client for the browser and node.js "
+	      ),
+	      React.createElement("br", null),
+	      React.createElement(
+	        "li",
+	        null,
+	        React.createElement(
+	          "a",
+	          { href: "http://foundation.zurb.com/" },
+	          "Foundation:"
+	        ),
+	        " - For simple HTML/CSS display of application "
+	      ),
+	      React.createElement("br", null)
+	    )
 	  );
 	};
 
@@ -26289,11 +26365,47 @@
 
 	var React = __webpack_require__(8);
 
+	var _require = __webpack_require__(166);
+
+	var Link = _require.Link;
+
+
 	var Examples = function Examples(props) {
 	  return React.createElement(
-	    'h2',
+	    'div',
 	    null,
-	    'Examples component'
+	    React.createElement(
+	      'h1',
+	      { className: 'text-center' },
+	      'Examples'
+	    ),
+	    React.createElement(
+	      'p',
+	      null,
+	      'Here are a few example locations to try out:'
+	    ),
+	    React.createElement(
+	      'ol',
+	      null,
+	      React.createElement(
+	        'li',
+	        null,
+	        React.createElement(
+	          Link,
+	          { to: '/?location=Hobart' },
+	          'Hobart, AUS'
+	        )
+	      ),
+	      React.createElement(
+	        'li',
+	        null,
+	        React.createElement(
+	          Link,
+	          { to: '/?location=Melbourne' },
+	          ' Melbourne, AUS'
+	        )
+	      )
+	    )
 	  );
 	};
 
